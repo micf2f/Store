@@ -8,7 +8,7 @@ export default function ErrorRoute() {
     <div className='flex flex-col items-center justify-center min-h-screen my-4'>
 
       <img src={errorImg} className='opacity-25 w-80' />
-      <p className='font-semibold text-2xl pt-8'> Oops! Something went wrong... </p>
+      <p className='font-semibold text-gray-500 text-3xl pt-8'> Oops! Something went wrong... </p>
 
     </div>
   )

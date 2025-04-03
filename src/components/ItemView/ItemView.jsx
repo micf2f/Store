@@ -51,7 +51,7 @@ export default function ItemView() {
                         <span> Price, $ </span>
                         <span> {book.price} </span>
                     </p>
-                    <p className="flex justify-between font-semibold mb-2">
+                    <p className="flex justify-between items-center font-semibold mb-2">
                         <span> Count </span>
                         <span>
                             <input
