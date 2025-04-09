@@ -10,10 +10,11 @@ export default function Menu() {
   return (<div className='pl-8'>
 
     {customer.length ?
-      <NavLink to="/books" className='text-lg text-gray-400 hover:text-blue-600 hover:underline'>
+      <p className='text-lg text-gray-400 hover:text-blue-600 hover:underline'>
         Books
-      </NavLink>
-      : <p className='text-lg text-gray-400'> Books </p>}
+      </p>
+      : <p className='text-lg text-gray-400'> Books </p>
+    }
 
   </div>)
 }
