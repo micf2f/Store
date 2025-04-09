@@ -53,7 +53,7 @@ export default function Navigation() {
             <NavLink to="/">
                 <div className='flex items-center mx-4'>
                     <img src={avatar} className="w-9 h-9 shadow-sm rounded-full mr-2" />
-                    <p className='text-stone-600'>
+                    <p className='text-stone-400'>
                         {customer.length ? customer : 'username'}
                     </p>
                 </div>

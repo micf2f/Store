@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SigninForm from '../components/SigninForm/SigninForm';
+import Signin from '../components/Signin/Signin';
 
 
 export default function SigninRoute() {
   return (<>
-    <SigninForm />
+    <Signin />
   </>)
 }
