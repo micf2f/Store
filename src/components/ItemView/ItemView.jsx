@@ -25,6 +25,7 @@ export default function ItemView() {
         }
 
         dispatch(setCartItems({
+            id: book.id,
             name: book.title,
             count: count,
             totalPrice: count * book.price
@@ -66,7 +67,7 @@ export default function ItemView() {
                     </p>
                     <p className="flex justify-between font-semibold mb-4">
                         <span> Total price, $ </span>
-                        <span> {book.price * count} </span>
+                        <span> {Number((book.price * count).toFixed(2))} </span>
                     </p>
                     <button
                         className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded"

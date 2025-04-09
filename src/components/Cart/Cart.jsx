@@ -22,7 +22,7 @@ export default function Cart() {
         <div className='min-h-screen my-4'>
             <ul> <CartItem /> </ul>
             <div className='flex justify-between mt-4'>
-                <p className='font-semibold'> Total price: ${cart.totalPrice} </p>
+                <p className='font-semibold'> Total price: ${Number(cart.totalPrice.toFixed(2))} </p>
                 <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mb-4"
                     onClick={handlePurchase}>

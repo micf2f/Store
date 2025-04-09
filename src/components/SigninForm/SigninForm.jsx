@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { setCustomer } from "../../store/features/books/slice";
 
+import { useNavigate } from "react-router-dom";
+
 import avatar from '../../images/avatar.png';
 
 
@@ -13,6 +15,8 @@ export default function SigninForm() {
   const { customer } = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
 
   const handleChange = () => {
     setUsername(event.target.value);
@@ -22,6 +26,7 @@ export default function SigninForm() {
     e.preventDefault();
     dispatch(setCustomer(username));
     localStorage.setItem('username', username);
+    navigate("/books");
   }
 
 

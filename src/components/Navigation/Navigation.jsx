@@ -44,7 +44,7 @@ export default function Navigation() {
 
             <NavLink to="/">
                 <button
-                    className="bg-white hover:bg-gray-100 text-stone-600 text-sm py-1 px-2 border border-gray-400 rounded shadow"
+                    className="bg-white hover:bg-gray-100 text-stone-600 text-sm py-1 px-2 ml-2 border border-gray-400 rounded shadow"
                     onClick={handleSignOut}>
                     Sign-Out
                 </button>
@@ -52,7 +52,7 @@ export default function Navigation() {
 
             <NavLink to="/">
                 <div className='flex items-center mx-4'>
-                    <img src={avatar} className="w-9 h-9 shadow-sm rounded-full mx-2" />
+                    <img src={avatar} className="w-9 h-9 shadow-sm rounded-full mr-2" />
                     <p className='text-stone-600'>
                         {customer.length ? customer : 'username'}
                     </p>
