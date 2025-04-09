@@ -5,8 +5,8 @@ import ToolBar from '../components/ToolBar/ToolBar';
 
 
 export default function ItemsListRoute() {
-  return (<>
+  return (<div className='min-h-screen'>
     <ToolBar />
     <ItemsList />
-  </>)
+  </div>)
 }

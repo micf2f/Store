@@ -25,9 +25,11 @@ export default function Signin() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(setCustomer(username));
-        localStorage.setItem('username', username);
-        navigate("/books");
+        if (username !== null && username.trim() !== '') {
+            dispatch(setCustomer(username));
+            localStorage.setItem('username', username);
+            navigate("/books");
+        } else {alert('Please, enter the correct username')}
     }
 
     const handleNavigate = () => {

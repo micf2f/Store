@@ -26,10 +26,10 @@ export default function ItemRoute() {
   }, [])
 
 
-  return (<>
+  return (<div className="min-h-screen">
 
     {Object.keys(book).length ? <ItemView /> : null}
 
-  </>)
+  </div>)
 
 }
