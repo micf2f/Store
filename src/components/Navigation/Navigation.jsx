@@ -52,8 +52,8 @@ export default function Navigation() {
 
             <NavLink to="/">
                 <div className='flex items-center mx-4'>
-                    <img src={avatar} className="w-9 h-9 shadow-sm rounded-full mr-2" />
-                    <p className='text-stone-400'>
+                    <img src={avatar} className="w-9 h-9 shadow-sm rounded-full mr-2 hidden sm:inline" />
+                    <p className='text-stone-400 hidden md:inline'>
                         {customer.length ? customer : 'username'}
                     </p>
                 </div>

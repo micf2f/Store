@@ -70,11 +70,18 @@ export const booksSlice = createSlice({
       } else {
         state.filteredBooks = state.books;
       }
+    },
+    removeFromCart: (state, { payload }) => {
+      state.cart.books = state.cart.books.filter(item => item.id != payload);
+      state.cart.items = state.cart.books.reduce((sum, book) => sum + book.count, 0);
+      state.cart.totalPrice = state.cart.books.reduce((sum, book) => sum + book.totalPrice, 0);
+
+      localStorage.setItem('cartBooks', JSON.stringify(state.cart.books));
     }
   },
 })
 
 
-export const { setCustomer, removeCustomer, setBooks, setBook, setCartItems, removeCart, filterBooks, searchBooks } = booksSlice.actions
+export const { setCustomer, removeCustomer, setBooks, setBook, setCartItems, removeCart, filterBooks, searchBooks, removeFromCart } = booksSlice.actions
 
 export default booksSlice.reducer;
